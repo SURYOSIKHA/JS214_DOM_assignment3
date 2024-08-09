@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+.product-title {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.product-category {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    font-size: 14px;
+    color: #ff9800;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filter-container select {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="filter-container">
+        <select id="filterByCategory">
+            <option value="">Choose by category</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="jewelery">Jewelery</option>
+            <option value="electronics">Electronics</option>
+        </select>
+    
+        <select id="sortByPrice">
+            <option value="">Sort by price</option>
+            <option value="price-high-to-low">High to Low</option>
+            <option value="price-low-to-high">Low to High</option>
+        </select>
+
+        <select id="sortByRating">
+            <option value="">Sort by popularity (rating)</option>
+            <option value="rating-high-to-low">High to Low</option>
+            <option value="rating-low-to-high">Low to High</option>
+        </select>
+    </div>
+    <div id="products-container" class="products-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
